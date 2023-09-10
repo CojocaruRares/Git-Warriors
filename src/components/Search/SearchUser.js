@@ -6,13 +6,11 @@ import UserProfile from "./UserProfile";
 function SearchUser() {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
-  const [displayedUsername, setDisplayedUsername] = useState("");
-
+ 
   const handleSearch = () => {
     GetUser(username)
       .then((user) => {
         setUserData(user);
-        setDisplayedUsername(user.name || username);
       })
       .catch((error) => {
         console.error(error);
