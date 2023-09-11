@@ -27,7 +27,7 @@ function UserRepo(props) {
                 </a>
               </h3>
               <p>Main language: {repo.language}</p>
-              <p>Updated at: {FormatDate(repo.updated_at)}</p>
+              <p className="italic">Updated at: {FormatDate(repo.updated_at)}</p>
             </div>
           );
         })}

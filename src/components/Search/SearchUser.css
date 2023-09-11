@@ -17,14 +17,31 @@
     border-radius: 10px;
     border: 1px solid black;
     width: 150px;
-    background-color: #A3C6C4;
+    background-color:  #6C7A89;
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
   }
   
   .search-btn:hover {
-    background-color: #6C7A89;
+    background-color: #A3C6C4;
+  }
+
+  h2{
+    color:#354649;
+  }
+
+  @media (max-width: 768px) {
+  
+    input[type="text"] {
+      width: 90%; 
+      max-width:400px; 
+    }
+  
+    .search-btn {
+      width: 90%;
+      max-width: 200px; 
+    }
   }
   
 
