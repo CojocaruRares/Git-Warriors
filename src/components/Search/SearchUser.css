@@ -1,12 +1,3 @@
-.user-profile {
-    text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
 
   .flex-div{
     display: flex;
@@ -19,19 +10,21 @@
     width: 400px;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
   }
   
-  button {
+  .search-btn {
+    border-radius: 10px;
+    border: 1px solid black;
     width: 150px;
-    background-color: #007bff;
+    background-color: #A3C6C4;
     color: #fff;
-    border: none;
     padding: 10px 20px;
     cursor: pointer;
   }
   
-  button:hover {
-    background-color: #0056b3;
+  .search-btn:hover {
+    background-color: #6C7A89;
   }
   
 
