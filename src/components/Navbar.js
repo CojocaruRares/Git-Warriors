@@ -14,6 +14,9 @@ function Navbar(){
                 <li>
                 <Link to="/SearchUser">Users</Link>
                 </li>
+                <li>
+                <Link to="/Battle">Battle</Link>
+                </li>
             </ul>
         </header>
     );
