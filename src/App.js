@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import SearchUser from './components/Search/SearchUser';
+import Battle from './components/Battle/Battle';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/SearchUser' element={<SearchUser/>} />
+          <Route path='/Battle' element={<Battle/>} />
         </Routes>
       </div>
     </Router>
