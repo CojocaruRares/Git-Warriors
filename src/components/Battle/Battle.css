@@ -30,3 +30,10 @@ input[type="text"] {
 .battle-btn{
   align-self: center;
 }
+
+@media (max-width: 768px) {
+  .flex-row{
+    flex-direction: column;
+    gap: 10px;
+  }
+}

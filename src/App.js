@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import SearchUser from './components/Search/SearchUser';
 import Battle from './components/Battle/Battle';
+import Leaderboard from './components/Leaderboard/Leaderboard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/SearchUser' element={<SearchUser/>} />
           <Route path='/Battle' element={<Battle/>} />
+          <Route path='/Leaderboard' element={<Leaderboard/>} />
         </Routes>
       </div>
     </Router>

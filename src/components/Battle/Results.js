@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect } from "react";
+import db from "../../utils/firebase";
 
 function calculateSccore(data) {
   let sccore =
@@ -6,7 +7,7 @@ function calculateSccore(data) {
     data.public_gists * 10 +
     data.followers * 2 +
     data.following;
-
+  
   return sccore;
 }
 
@@ -18,6 +19,33 @@ function Results(props) {
   else if (calculateSccore(players[0]) > calculateSccore(players[1]))
     playerStatus = ["Winner", "Loser"];
   else playerStatus = ["Loser", "Winner"];
+
+  useEffect(() => {
+    const winnerIndex =
+      calculateSccore(players[0]) > calculateSccore(players[1]) ? 0 : 1;
+    if (playerStatus[winnerIndex] !== "Draw") {
+      const winner = players[winnerIndex];
+      db.collection("players")
+        .doc(winner.login)
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            const currentWins = doc.data().wins || 0;
+            db.collection("players")
+              .doc(winner.login)
+              .update({
+                wins: currentWins + 1,
+              });
+          } else {
+            db.collection("players").doc(winner.login).set({
+              avatar_url: winner.avatar_url,
+              name: winner.name || winner.login,
+              wins: 1,
+            });
+          }
+        });
+    }
+  }, [players, playerStatus]);
 
   return (
     <div className="flex-row">

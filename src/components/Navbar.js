@@ -17,6 +17,9 @@ function Navbar(){
                 <li>
                 <Link to="/Battle">Battle</Link>
                 </li>
+                <li>
+                <Link to="/Leaderboard">Leaderboard</Link>
+                </li>
             </ul>
         </header>
     );
